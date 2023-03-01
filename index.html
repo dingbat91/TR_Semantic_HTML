@@ -4,11 +4,12 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="x-ua-compatible" content="ie=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./style.css" />
 		<title>tech returner news</title>
 	</head>
 	<body>
-		<h1><a href="/index.html">tech returner news</a></h1>
-		<nav>
+		<h1><a href="/index.html" id="stitle">tech returner news</a></h1>
+		<nav class="navbar" id="navmenu">
 			<a href="/news/">news</a>
 			<a href="/opinion/">opinion</a>
 			<a href="/tech/">tech</a>
@@ -19,113 +20,126 @@
 			<a href="/jobs/">jobs</a>
 		</nav>
 
-		<form>
-			<h2>preferences</h2>
-			<p>
-				we aim to make this site accessible to a wide audience and to ensure a
-				great experience for all usrs by conforming to
-				<a href="https://www.w3.org/wai/standards-guidelines/wcag/"
-					>world wide web consortium</a
-				>
-				accessibility guidelines. (w3c's wcag) however, if you are having
-				trouble reading this website you can change the way it looks or disable
-				some of it's functionalities.
-			</p>
-
-			<input type="checkbox" id="flashing" value="flashing" />
-			<label for="flashing"
-				>allow flashing elements. untick to disable flashing and moving
-				elements.</label
+		<form id="prefform">
+			<input id="collapsible" class="toggle" type="checkbox" />
+			<label for="collapsible" class="lbl-toggle" tabindex="0"
+				>preferences</label
 			>
+			<div class="collapsable-content">
+				<p>
+					We aim to make this site accessible to a wide audience and to ensure a
+					great experience for all users by conforming to
+					<a href="https://www.w3.org/wai/standards-guidelines/wcag/"
+						>world wide web consortium</a
+					>
+					accessibility guidelines. (W3C's WCAG) however, if you are having
+					trouble reading this website you can change the way it looks or
+					disable some of it's functionalities.
+				</p>
+
+				<input type="checkbox" id="flashing" value="flashing" />
+				<label for="flashing"
+					>Allow flashing elements. untick to disable flashing and moving
+					elements.</label
+				>
+			</div>
 		</form>
 
 		<article>
-			<h2>accessibility features: easy wins</h2>
-			<h3>handy tips on how to create accessible websites for everyone</h3>
-			<a href="mailto:jimmy.eggs@hotmail.com" rel="author">jim eggs</a>
-			04.08.21
+			<h2 class="articletitle">Accessibility features: Easy wins</h2>
+			<h3 class="articlesubtitle">
+				Handy tips on how to create accessible websites for everyone
+			</h3>
+			<a href="mailto:jimmy.eggs@hotmail.com" rel="author">jim eggs 04.08.21</a>
 
 			<img
+				class="articleimg"
 				src="./images/keyboard.png"
 				alt="keyboard with a button labelled 'accessibility"
 			/>
 
 			<p>
-				tim berners lee dreamt of a world wide web that would be free and
+				Tim Berners Lee dreamt of a world wide web that would be free and
 				accessible to everyone. sadly, the modern web is littered with poorly
 				designed websites and difficult to navigate code (for both developers
 				and users). this often comes down to a lack of understanding around
 				different user needs.
 			</p>
 			<p>
-				designing pages that are accessible for everyone shouldn’t be too
+				Designing pages that are accessible for everyone shouldn’t be too
 				difficult. the developers at tech returners news have collated an ‘easy
 				wins' checklist for web page accessibility.
 			</p>
 			<p>
-				keep this guide handy… when creating your own websites you can check
+				Keep this guide handy… when creating your own websites you can check
 				these criteria off the list!
 			</p>
 
-			<aside>
-				what would a truly accessible city look like?
-				<a href="">read more...</a>
+			<aside class="articleaside">
+				What would a <em>truly</em> accessible city look like?
+				<a href="">Read more...</a>
 			</aside>
-			<h2>accessibility checks</h2>
-			<ul>
+			<h2 class="articlesubheading">accessibility checks</h2>
+			<ul class="articlelist">
 				<li>
-					heading elements & page titles: html heading elements have been used
-					to represent page structure, supporting assistive technologies that
-					allow page navigation from heading to heading.
+					<span class="listtitle">heading elements & page titles:</span> html
+					heading elements have been used to represent page structure,
+					supporting assistive technologies that allow page navigation from
+					heading to heading.
 				</li>
 				<li>
-					re-size text: you can vary text size by using your browser's text
-					resize settings (through options or preferences), text-only zoom, page
-					zoom (which also zooms images, buttons etc) without incurring styling
-					issues / text over-lapping or being cut off the page.
+					<span class="listtitle">Re-size Text:</span> you can vary text size by
+					using your browser's text resize settings (through options or
+					preferences), text-only zoom, page zoom (which also zooms images,
+					buttons etc) without incurring styling issues / text over-lapping or
+					being cut off the page.
 				</li>
 				<li>
-					alternative text for images: all images have been given appropriate
-					alternative text.
+					<span class="listtitle">Alternative Text for images:</span> all images
+					have been given appropriate alternative text.
 				</li>
 				<li>
-					javascript independence: where javascript or other scripts are used
-					for navigation or functionality, an alternative mechanism has been put
-					in place in case your browser does not support these scripts.
+					<span class="listtitle">Javascript Independence:</span> where
+					javascript or other scripts are used for navigation or functionality,
+					an alternative mechanism has been put in place in case your browser
+					does not support these scripts.
 				</li>
 				<li>
-					colour contrast: has been checked for text and background colour
-					combinations to ensure that the contrast is sufficient and i have also
-					ensured that information is not referenced by colour alone.
+					<span class="listtitle">Colour Contrast:</span> has been checked for
+					text and background colour combinations to ensure that the contrast is
+					sufficient and i have also ensured that information is not referenced
+					by colour alone.
 				</li>
 				<li>
-					style sheets: if style sheets are not supported or are turned off,
-					information on the site can still be accessed and read.
+					<span class="listtitle">Style Sheets:</span> if style sheets are not
+					supported or are turned off, information on the site can still be
+					accessed and read.
 				</li>
 				<li>
-					forms: forms are marked up correctly so people can interact with them
-					using only the keyboard, voice input or screen readers. the form
-					labels themselves are clickable, increasing the target area and making
-					it easier to select small radio buttons of checkboxes.
+					<span class="listtitle">Forms:</span> forms are marked up correctly so
+					people can interact with them using only the keyboard, voice input or
+					screen readers. the form labels themselves are clickable, increasing
+					the target area and making it easier to select small radio buttons of
+					checkboxes.
 				</li>
 			</ul>
-			<aside>
-				for more information on web accessibility view
+			<aside class="articleaside">
+				For more information on web accessibility view
 				<a href="https://www.w3.org/wai/test-evaluate/preliminary/"
 					>https://www.w3.org/wai/test-evaluate/preliminary/
 				</a>
 			</aside>
 
-			<h2>conclusion</h2>
+			<h2 class="articlesubheading">conclusion</h2>
 			<p>
-				by spending just a little more time on getting the building blocks of
+				By spending just a little more time on getting the building blocks of
 				the web right, developers can help create an internet that works for
 				everyone.
 			</p>
 
-			<h2>more stories</h2>
+			<h2 class="additionalheader">more stories</h2>
 
-			<ul>
+			<ul class="additionallist">
 				<li>
 					<a href=""
 						>tokyo olympics: gold for great britain! a day in the life of call
@@ -165,17 +179,18 @@
 		</article>
 		<footer>
 			<img
+				id="footericon"
 				src="./images/tech-returners-squarelogo-1632919533592.png"
 				alt="Tech Returners Logo"
 			/>
-			<ul>
-				<li><a href="/news/">news</a></li>
-				<li><a href="/opinion/">opinion</a></li>
-				<li><a href="/sport/">sport</a></li>
-				<li><a href="/culture/">culture</a></li>
-				<li><a href="/tech/">tech</a></li>
-			</ul>
-			© 2021 tech returners news
+			<nav class="navbar" id="footermenu">
+				<a href="/news/">news</a>
+				<a href="/opinion/">opinion</a>
+				<a href="/sport/">sport</a>
+				<a href="/culture/">culture</a>
+				<a href="/tech/">tech</a>
+			</nav>
+			<span id="copywritedate">© 2021 tech returners news</span>
 		</footer>
 	</body>
 </html>
